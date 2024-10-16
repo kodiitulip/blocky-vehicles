@@ -6,4 +6,6 @@ advancement revoke @s only blockyvehicles:trigger/train/base/spawn
 
 execute as @n[type=minecraft:marker,distance=..7,tag=blockyvehicles.train.spawner] at @s if function blockyvehicles:trains/utils/has_space run return run function blockyvehicles:trains/base/summon
 
+execute as @n[type=minecraft:marker,distance=..7,tag=blockyvehicles.train.spawner] run kill
+
 title @p actionbar ["",{"text": "Not enough space!", "color": "#b70f0f"}]

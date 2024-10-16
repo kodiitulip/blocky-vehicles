@@ -1,0 +1,18 @@
+{
+	"display": {
+		"title": "Blocky Vehicles",
+		"description": "Only trains for now",
+		"icon": {
+			"id": "minecraft:iron_block"
+		},
+		"background": "minecraft:textures/block/light_gray_concrete.png",
+		"show_toast": false,
+		"announce_to_chat": false
+	},
+	"criteria": {
+		"trigger": {
+			"trigger": "minecraft:tick"
+		}
+	},
+	"parent": "tiskodie:root"
+}

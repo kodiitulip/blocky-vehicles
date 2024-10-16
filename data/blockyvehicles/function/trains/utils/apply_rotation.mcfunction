@@ -1,5 +1,5 @@
 # apply rotation
-execute at @s positioned ^ ^ ^4 run tp @s ^ ^ ^-4 facing entity @n[type=minecraft:marker,tag=blockyvehicles.train.bogey,distance=..3]
+execute at @s positioned ^ ^ ^4 run tp @s ^ ^ ^-4 facing entity @n[type=minecraft:marker,tag=blockyvehicles.train.bogey,distance=..3,scores={blockyvehicles.tid=0}]
 
 execute store result score .rot blockyvehicles.rx run data get entity @s Rotation[0] 1000
 execute store result score .rot blockyvehicles.ry run data get entity @s Rotation[1] 1000

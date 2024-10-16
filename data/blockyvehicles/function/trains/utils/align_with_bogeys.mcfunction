@@ -1,10 +1,15 @@
-# update bogey coordinates
-execute positioned ^ ^ ^4 as @n[type=minecraft:marker,tag=blockyvehicles.train.bogey,distance=..3] run function blockyvehicles:trains/utils/update_bogey_coordinates
+# set bogey tid to 0 for easy targeting
+function blockyvehicles:trains/utils/set_bogeyid_zero
 
-execute positioned ^ ^ ^-4 as @n[type=minecraft:marker,tag=blockyvehicles.train.bogey,distance=..3] run function blockyvehicles:trains/utils/update_bogey_coordinates
+# update bogey coordinates
+execute positioned ^ ^ ^4 as @n[type=minecraft:marker,tag=blockyvehicles.train.bogey,distance=..3,scores={blockyvehicles.tid=0}] run function blockyvehicles:trains/utils/update_bogey_coordinates
+
+execute positioned ^ ^ ^-4 as @n[type=minecraft:marker,tag=blockyvehicles.train.bogey,distance=..3,scores={blockyvehicles.tid=0}] run function blockyvehicles:trains/utils/update_bogey_coordinates
 
 # calculate the new position
 function blockyvehicles:trains/utils/calculate_middle_pos
 
 # apply rotation
 function blockyvehicles:trains/utils/apply_rotation
+
+function blockyvehicles:trains/utils/reset_bogeyid

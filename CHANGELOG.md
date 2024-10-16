@@ -19,3 +19,9 @@
 -   Added a space check for spawning the train
 -   Now 'uninstall' will call 'remove_all' function to remove all the vehicles before deleting data
 -   Changed spawn rotation fix to 15 degrees increment
+
+# CHANGES - 16/10/2024 - 13:30 - prototype
+
+-   Per Entity Id System! Now the train's parts have a set id value for every train spawned allowing for much easier targeting, and avoid the case wher the visual would loose track of its bogey and find a different one
+-   Remover item: Added an spawner that when used near the vehicle will remove it, and reset global id if there are no more vehicles
+-   Root Advancement: Added advancement to show the datapack is installed
