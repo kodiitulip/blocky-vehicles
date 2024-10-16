@@ -13,3 +13,9 @@
 -   When spawned trains will now follow the players rotation on 45 degrees of snapping (might change to 15 degrees or free angle)
 -   When remove_near function is called and the caller is not in creative mode, the train spawner will drop (drop is still hardcoded will need to modify)
 -   Removed the fixing bogey rotation since it could make difficult to change the train's direction
+
+# CHANGES - 16/10/2024 - 12:30 - prototype
+
+-   Added a space check for spawning the train
+-   Now 'uninstall' will call 'remove_all' function to remove all the vehicles before deleting data
+-   Changed spawn rotation fix to 15 degrees increment

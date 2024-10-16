@@ -1,3 +1,5 @@
+function blockyvehicles:remove_all
+
 scoreboard objectives remove blockyvehicles.x
 scoreboard objectives remove blockyvehicles.y
 scoreboard objectives remove blockyvehicles.z
