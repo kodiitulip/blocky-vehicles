@@ -1,0 +1,33 @@
+{
+	"type": "minecraft:command",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:cat_spawn_egg",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:custom_data": {
+									"blockyvehicles": {
+										"type": "spawner",
+										"vehicle": "train",
+										"variant": "base"
+									}
+								},
+								"minecraft:item_name": "\"Train Base Spawner\"",
+								"minecraft:entity_data": {
+									"id": "minecraft:marker",
+									"Tags": ["blockyvehicles.train.spawner"]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
