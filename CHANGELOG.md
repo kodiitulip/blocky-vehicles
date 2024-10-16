@@ -30,3 +30,15 @@
 
 -   Rotation fixes!!! Fixed some errors on rotation of the bogeys
 -   The start of moviment. Now back bogeys will detect when the front bogey is too far away or too close, and will move acordinly to keep the 8 block distance between the bogeys
+
+# CHANGES - 16/10/2024 - 17:45 - prototype
+
+-   WE GOT MOVIMENT!! Now with the scoreboard 'tgtspeed' and 'speed', trains will be able to know what speed they should move at. For now the available speeds are as follows:
+    | scoreboard fakeplayer | scoreboard value |
+    | :------------------- | ---------------: |  
+    | #fastfoward | 2 |
+    | #slowfoward | 1 |
+    | #stop | 0 |
+    | #slowbackward | -1 |
+    | #fastbackward | -2 |
+-   General reorganization of some functions (it's still a mess but now its just a bit better!)
