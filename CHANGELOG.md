@@ -25,3 +25,8 @@
 -   Per Entity Id System! Now the train's parts have a set id value for every train spawned allowing for much easier targeting, and avoid the case wher the visual would loose track of its bogey and find a different one
 -   Remover item: Added an spawner that when used near the vehicle will remove it, and reset global id if there are no more vehicles
 -   Root Advancement: Added advancement to show the datapack is installed
+
+# CHANGES - 16/10/2024 - 16:45 - prototype
+
+-   Rotation fixes!!! Fixed some errors on rotation of the bogeys
+-   The start of moviment. Now back bogeys will detect whe then front bogey is too far away or too close and will move acordinly to close the gap

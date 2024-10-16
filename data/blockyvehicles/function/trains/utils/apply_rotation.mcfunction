@@ -1,14 +1,24 @@
 # apply rotation
-execute at @s positioned ^ ^ ^4 run tp @s ^ ^ ^-4 facing entity @n[type=minecraft:marker,tag=blockyvehicles.train.bogey,distance=..3,scores={blockyvehicles.tid=0}]
+execute at @s run tp @s ^ ^ ^ facing entity @n[type=minecraft:marker,tag=blockyvehicles.train.bogey.front,distance=..5,scores={blockyvehicles.tid=0}]
 
-execute store result score .rot blockyvehicles.rx run data get entity @s Rotation[0] 1000
-execute store result score .rot blockyvehicles.ry run data get entity @s Rotation[1] 1000
+# grabing the rotation value from root
+execute store result score .rot blockyvehicles.rx run data get entity @s Rotation[0] 100
+execute store result score .rot blockyvehicles.ry run data get entity @s Rotation[1] 100
 
-execute on passengers store result entity @s Rotation[0] float 0.001 run scoreboard players get .rot blockyvehicles.rx
-execute on passengers store result entity @s Rotation[1] float 0.001 run scoreboard players get .rot blockyvehicles.ry
 
-# execute positioned ^ ^ ^4 as @n[type=minecraft:marker,tag=blockyvehicles.train.bogey,distance=..3] store result entity @s Rotation[0] float 0.001 run scoreboard players get .rot blockyvehicles.rx
-# execute positioned ^ ^ ^4 as @n[type=minecraft:marker,tag=blockyvehicles.train.bogey,distance=..3] store result entity @s Rotation[1] float 0.001 run scoreboard players get .rot blockyvehicles.ry
+## Clamping rotation value between 0 and 36000
+# rx
+execute if score .rot blockyvehicles.rx matches ..0 run scoreboard players add .rot blockyvehicles.rx 36000
+execute if score .rot blockyvehicles.rx matches 36000.. run scoreboard players remove .rot blockyvehicles.rx 36000
 
-# execute positioned ^ ^ ^-4 as @n[type=minecraft:marker,tag=blockyvehicles.train.bogey,distance=..3] store result entity @s Rotation[0] float 0.001 run scoreboard players get .rot blockyvehicles.rx
-# execute positioned ^ ^ ^-4 as @n[type=minecraft:marker,tag=blockyvehicles.train.bogey,distance=..3] store result entity @s Rotation[1] float 0.001 run scoreboard players get .rot blockyvehicles.ry
+# ry
+execute if score .rot blockyvehicles.ry matches ..0 run scoreboard players add .rot blockyvehicles.ry 36000
+execute if score .rot blockyvehicles.ry matches 36000.. run scoreboard players remove .rot blockyvehicles.ry 36000
+
+
+# manualy fixing a rotaation bug with the positive z axis
+execute if score .rot blockyvehicles.rx matches 35999..36000 run scoreboard players set .rot blockyvehicles.rx 0
+
+# applying rotation to all blockdisplay passengers
+execute on passengers store result entity @s Rotation[0] float 0.01 run scoreboard players get .rot blockyvehicles.rx
+execute on passengers store result entity @s Rotation[1] float 0.01 run scoreboard players get .rot blockyvehicles.ry
