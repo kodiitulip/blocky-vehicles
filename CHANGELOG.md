@@ -34,11 +34,16 @@
 # CHANGES - 16/10/2024 - 17:45 - prototype
 
 -   WE GOT MOVIMENT!! Now with the scoreboard 'tgtspeed' and 'speed', trains will be able to know what speed they should move at. For now the available speeds are as follows:
-    | scoreboard fakeplayer | scoreboard value |
-    | :------------------- | ---------------: |  
-    | #fastfoward | 2 |
-    | #slowfoward | 1 |
-    | #stop | 0 |
-    | #slowbackward | -1 |
-    | #fastbackward | -2 |
+    | scoreboard fakeplayer | scoreboard value | how much it moves |
+    | :-------------------- | :--------------: | ----------------: |
+    | #fastfoward | 2 | 0.2 b/t fowards |
+    | #slowfoward | 1 | 0.1 b/t fowards |
+    | #stop | 0 | 0.0 b/t |
+    | #slowbackward | -1 | 0.1 b/t backwards |
+    | #fastbackward | -2 | 0.2 b/t backwards |
 -   General reorganization of some functions (it's still a mess but now its just a bit better!)
+
+# CHANGES - 16/10/2024 - 21:10 - prototype
+
+-   WE GOT TRACKS! Actually we got right turns, that when used correctly can connect like a track
+    -   the bogeys detects for a turn underneath them every tick and depending on the turn it will change the bogey's rotation to ther turns rotation (still needs some ironing)

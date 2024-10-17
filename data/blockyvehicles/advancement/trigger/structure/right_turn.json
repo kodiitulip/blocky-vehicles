@@ -1,0 +1,29 @@
+{
+	"criteria": {
+		"trigger": {
+			"trigger": "minecraft:item_used_on_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"items": "minecraft:turtle_spawn_egg",
+							"components": {
+								"minecraft:custom_data": {
+									"blockyvehicles": {
+										"type": "structure",
+										"variant": "right_turn"
+									}
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "blockyvehicles:structure/turns/right_trigger"
+	},
+	"parent": "blockyvehicles:root"
+}

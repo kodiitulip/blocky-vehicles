@@ -16,8 +16,9 @@ execute if score .rot blockyvehicles.ry matches ..0 run scoreboard players add .
 execute if score .rot blockyvehicles.ry matches 36000.. run scoreboard players remove .rot blockyvehicles.ry 36000
 
 
-# manualy fixing a rotaation bug with the positive z axis
+# manualy fixing a rotaation bug with the positive z axis ad negative x axis
 execute if score .rot blockyvehicles.rx matches 35999..36000 run scoreboard players set .rot blockyvehicles.rx 0
+execute if score .rot blockyvehicles.rx matches 8999..9000 run scoreboard players set .rot blockyvehicles.rx 9000
 
 # applying rotation to all blockdisplay passengers
 execute on passengers store result entity @s Rotation[0] float 0.01 run scoreboard players get .rot blockyvehicles.rx
