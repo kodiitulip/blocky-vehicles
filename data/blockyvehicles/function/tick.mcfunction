@@ -1,1 +1,1 @@
-execute as @e[type=minecraft:block_display,tag=blockyvehicles.train.visual] at @s run function blockyvehicles:trains/tick
+execute as @e[type=#blockyvehicles:displays,tag=blockyvehicles.train.visual] at @s run function blockyvehicles:trains/tick

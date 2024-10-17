@@ -1,2 +1,2 @@
-execute if score @s blockyvehicles.speed = #slowfoward blockyvehicles.speed run return run tp @s ^ ^ ^0.1
-execute if score @s blockyvehicles.speed = #fastfoward blockyvehicles.speed run return run tp @s ^ ^ ^0.2
+execute if score @s blockyvehicles.speed = #slowfoward blockyvehicles.speed run return run tp @s ^ ^ ^0.3
+execute if score @s blockyvehicles.speed = #fastfoward blockyvehicles.speed run return run tp @s ^ ^ ^0.7

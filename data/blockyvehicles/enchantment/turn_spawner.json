@@ -1,0 +1,46 @@
+{
+	"anvil_cost": 1,
+	"description": "Train Turn Spawner Effect",
+	"max_cost": {
+		"base": 1,
+		"per_level_above_first": 1
+	},
+	"max_level": 1,
+	"min_cost": {
+		"base": 1,
+		"per_level_above_first": 1
+	},
+	"slots": ["offhand", "mainhand"],
+	"supported_items": ["minecraft:turtle_spawn_egg"],
+	"weight": 1,
+	"effects": {
+		"minecraft:tick": [
+			{
+				"effect": {
+					"type": "minecraft:run_function",
+					"function": "blockyvehicles:structure/turns/turn_effect_right"
+				},
+				"requirements": [
+					{
+						"condition": "minecraft:entity_properties",
+						"entity": "this",
+						"predicate": {
+							"slots": {
+								"weapon.*": {
+									"components": {
+										"minecraft:custom_data": {
+											"blockyvehicles": {
+												"type": "structure",
+												"variant": "right_turn"
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				]
+			}
+		]
+	}
+}

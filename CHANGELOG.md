@@ -47,3 +47,17 @@
 
 -   WE GOT TRACKS! Actually we got right turns, that when used correctly can connect like a track
     -   the bogeys detects for a turn underneath them every tick and depending on the turn it will change the bogey's rotation to ther turns rotation (still needs some ironing)
+
+# CHANGES - 17/10/2024 - 03:10 - prototype
+
+-   Its fully functional!! It's not survival friendly but it is functional
+-   Trains can follow tracks (hopefully they wont escape the tracks)
+-   by setting the speed of the front bogey the train will move foward or back with new speeds
+    | scoreboard fakeplayer | scoreboard value | how much it moves |
+    | :-------------------- | :--------------: | ----------------: |
+    | #fastfoward | 2 | 0.4 b/t fowards |
+    | #slowfoward | 1 | 0.7 b/t fowards |
+    | #stop | 0 | 0.0 b/t |
+    | #slowbackward | -1 | 0.4 b/t backwards |
+    | #fastbackward | -2 | 0.7 b/t backwards |
+-   I now lost interest in this project so maybe it will never see the light of day, but it was fun while it lasted

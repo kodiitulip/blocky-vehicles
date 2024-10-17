@@ -14,7 +14,8 @@ scoreboard players operation @e[tag=blockyvehicles.train.init,distance=..7] bloc
 # apply rotation to root
 execute as @e[type=#blockyvehicles:displays,tag=blockyvehicles.train.init,distance=..7] if score @s blockyvehicles.tid = .global blockyvehicles.tid store result entity @s Rotation[0] float 0.01 run scoreboard players get .origin blockyvehicles.rx
 
-execute as @n[type=#blockyvehicles:displays,tag=blockyvehicles.train.bogey,distance=..7] if score @s blockyvehicles.tid = .global blockyvehicles.tid run scoreboard players set @s blockyvehicles.speed 0
+execute as @e[type=#blockyvehicles:displays,tag=blockyvehicles.train.bogey,distance=..7] if score @s blockyvehicles.tid = .global blockyvehicles.tid run scoreboard players set @s blockyvehicles.speed 0
+execute as @e[type=#blockyvehicles:displays,tag=blockyvehicles.train.bogey,distance=..7] if score @s blockyvehicles.tid = .global blockyvehicles.tid run scoreboard players set @s blockyvehicles.cooldown 0
 
 # remove init tag
 tag @e[tag=blockyvehicles.train.init,distance=..6] remove blockyvehicles.train.init
@@ -24,3 +25,5 @@ execute if entity @s[tag=blockyvehicles.train.spawner] run kill
 
 # update totalcount
 execute store result score .totalcount blockyvehicles.tid if entity @e[tag=blockyvehicles.train.visual]
+
+scoreboard players reset .origin blockyvehicles.rx

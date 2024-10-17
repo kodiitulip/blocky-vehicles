@@ -1,5 +1,5 @@
 # apply rotation
-execute at @s run tp @s ^ ^ ^ facing entity @n[type=minecraft:marker,tag=blockyvehicles.train.bogey.front,distance=..5,scores={blockyvehicles.tid=0}]
+execute at @s run tp @s ^ ^ ^ facing entity @n[type=minecraft:marker,tag=blockyvehicles.train.bogey.front,scores={blockyvehicles.tid=0}]
 
 # grabing the rotation value from root
 execute store result score .rot blockyvehicles.rx run data get entity @s Rotation[0] 100
@@ -23,3 +23,6 @@ execute if score .rot blockyvehicles.rx matches 8999..9000 run scoreboard player
 # applying rotation to all blockdisplay passengers
 execute on passengers store result entity @s Rotation[0] float 0.01 run scoreboard players get .rot blockyvehicles.rx
 execute on passengers store result entity @s Rotation[1] float 0.01 run scoreboard players get .rot blockyvehicles.ry
+
+scoreboard players reset .rot blockyvehicles.rx
+scoreboard players reset .rot blockyvehicles.ry

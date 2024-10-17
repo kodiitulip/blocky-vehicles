@@ -21,7 +21,10 @@
 										"variant": "right_turn"
 									}
 								},
-								"minecraft:item_name": "\"Right Turn Structure\""
+								"minecraft:item_name": "\"Right Turn Structure\"",
+								"minecraft:enchantments": {
+									"blockyvehicles:turn_spawner": 1
+								}
 							}
 						}
 					]
